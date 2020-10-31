@@ -1,0 +1,209 @@
+
+\chap{Integers} 
+
+
+
+% \label{chap:systems}
+
+% \chapter{\protect\hyperlink{chap:\thechapter}{Integers}}
+% \addtocontents{toc}{\protect\hypertarget{chap:\thechapter}{}}
+
+This chapter reviews the properties of Integers and arithmetic that are
+necessary for success in algebra. The chapter also introduces new vocabulary and concepts  and identifies and names familiar arithmetic
+properties in preparation for algebra.
+
+\eqref{chap:sys}
+\section{Learning Goals}
+\begin{tcolorbox}
+ \textbf{When you have successfully met the following criteria you will have met all of the learning intentions of the lesson}.
+\tcblower
+\begin{itemize}
+\item Describe the Place Value  Hindu-Arabic System using a three-digit example
+\item Decompose   four digit numbers including those containing zeros
+\item Name an ancient number system often seen on clock faces
+\item Explain two major disadvantages of non-place value renumeration
+    \item Graph whole numbers on a number line.
+   \item Determine which is the greater of two whole numbers
+   \item Graph integers on a number line
+   \item Find the opposite of an integer
+   \item Determine which is the greater of two integers
+   \item Find the absolute value of an integer
+\end{itemize}
+\end{tcolorbox}
+
+
+
+\section{Before you start}
+
+
+
+
+\section{Integers and decimals}
+Maths is divided in two based on whether the  \index{quantities} involved have gaps or not. It there are gaps then we can use counting to  describe the  "how much?" or "how many?" questions and our answer is always an integer.  If there are no gaps then we can measure the quantity to any level of precision and we use decimals for that.  Some situations can only give positive integer answers or non-negative answers but these \textbf{Natural Numbers} and \textbf{Whole Numbers} are just a type of integer and it is important that you appreciate that the most important distinction in maths between our number systems is that some are \textbf{discrete} and use integers and other are continuous and use  decimals. 
+
+Remember the gaps mean integers, no gaps means decimals. That is the big powerful idea you need to remember.
+\section{Fractions, decimals, percentages  }
+
+
+\subsection{1}
+
+\subsection{2}
+
+
+This text is typeset from the following LaTeX input:
+\begin{definition}
+Let $H$ be a subgroup of a group~$G$.  A \emph{left coset}
+of $H$ in $G$ is a subset of $G$ that is of the form $xH$,
+where $x \in G$ and $xH = \{ xh : h \in H \}$.
+Similarly a \emph{right coset} of $H$ in $G$ is a subset
+of $G$ that is of the form $Hx$, where
+$Hx = \{ hx : h \in H \}$
+\end{definition}
+
+Note that a subgroup~$H$ of a group $G$ is itself a
+left coset of $H$ in $G$.
+
+\begin{lemma}
+\label{LeftCosetsDisjoint}
+Let $H$ be a subgroup of a group $G$, and let $x$ and $y$ be
+elements of $G$.  Suppose that $xH \cap yH$ is non-empty.
+Then $xH = yH$.
+\end{lemma}
+
+\begin{proof}
+Let $z$ be some element of $xH \cap yH$.  Then $z = xa$
+for some $a \in H$, and $z = yb$ for some $b \in H$.
+If $h$ is any element of $H$ then $ah \in H$ and
+$a^{-1}h \in H$, since $H$ is a subgroup of $G$.
+But $zh = x(ah)$ and $xh = z(a^{-1}h)$ for all $h \in H$.
+Therefore $zH \subset xH$ and $xH \subset zH$, and thus
+$xH = zH$.  Similarly $yH = zH$, and thus $xH = yH$,
+as required.\qed
+\end{proof}
+
+\begin{lemma}
+\label{SizeOfLeftCoset}
+Let $H$ be a finite subgroup of a group $G$.  Then each left
+coset of $H$ in $G$ has the same number of elements as $H$.
+\end{lemma}
+
+\begin{proof}
+Let $H = \{ h_1, h_2,\ldots, h_m\}$, where
+$h_1, h_2,\ldots, h_m$ are distinct, and let $x$ be an
+element of $G$.  Then the left coset $xH$ consists of
+the elements $x h_j$ for $j = 1,2,\ldots,m$.
+Suppose that $j$ and $k$ are integers between
+$1$ and $m$ for which $x h_j = x h_k$.  Then
+$h_j = x^{-1} (x h_j) = x^{-1} (x h_k) = h_k$,
+and thus $j = k$, since $h_1, h_2,\ldots, h_m$
+are distinct.  It follows that the elements
+$x h_1, x h_2,\ldots, x h_m$ are distinct.
+We conclude that the subgroup~$H$ and the left
+coset $xH$ both have $m$ elements,
+as required.\qed
+\end{proof}
+
+\begin{theorem}
+\emph{(Lagrange's Theorem)}
+\label{Lagrange}
+Let $G$ be a finite group, and let $H$ be a subgroup
+of $G$.  Then the order of $H$ divides the order of $G$.
+\end{theorem}
+
+\begin{proof}
+Each element~$x$ of $G$ belongs to at least one left coset
+of $H$ in $G$ (namely the coset $xH$), and no element
+can belong to two distinct left cosets of $H$ in $G$
+(see Lemma~\ref{LeftCosetsDisjoint}).  Therefore every
+element of $G$ belongs to exactly one left coset of $H$.
+Moreover each left coset of $H$ contains $|H|$ elements
+(Lemma~\ref{SizeOfLeftCoset}).  Therefore $|G| = n |H|$,
+where $n$ is the number of left cosets of $H$ in $G$.
+The result follows.\qed
+\end{proof}
+
+
+
+
+
+
+
+\section{Counting Is Arithmetic}
+You have probably already learned  how to count! You may be saying: “But I already know how to count: one, two, three, $\ldots$”
+
+True. But most counting problems do not involve simply counting a list or group of items. Usually we have to first figure out what we’re counting, then we have to figure out how to count it.
+
+One thing that we will repeat over and over in this chapter, and indeed in the course of the entire book, is:
+
+\begin{claim}
+Don’t memorize!
+\end{claim}
+
+
+
+\section{Defining thereoms}
+Theorems can easily be defined
+\newtheorem{prop}{Proposition}[section]
+\begin{theorem}
+Let $f$ be a function whose derivative exists in every point, then $f$ is 
+a continuous function.
+\end{theorem}
+
+\begin{theorem}[Pythagorean theorem]
+\label{pythagorean}
+This is a theorema about right triangles and can be summarised in the next 
+equation 
+\[ x^2 + y^2 = z^2 \]
+\end{theorem}
+
+And a consequence of theorem \ref{pythagorean} is the statement in the next 
+corollary.
+
+\begin{corollary}
+There's no right rectangle whose sides measure 3cm, 4cm, and 6cm.
+\end{corollary}
+
+You can reference theorems such as \ref{pythagorean} when a label is assigned.
+
+\begin{lemma}
+Given two line segments whose lengths are $a$ and $b$ respectively there is a 
+real number $r$ such that $b=ra$.
+\end{lemma}
+
+\section{}
+
+
+
+
+\section{}
+
+\section{}
+
+
+
+\section{}
+
+
+\section{}
+
+
+
+
+
+
+
+\section{}
+
+
+
+
+\section{}
+
+
+
+
+
+
+
+
+\section{}

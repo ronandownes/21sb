@@ -1,0 +1,107 @@
+
+\documentclass[a4paper,10pt,parskip=half]{scrbook}
+\input{FRONTMATTER/pre2-Established}
+\input{FRONTMATTER/pre3Testing}
+\input{FRONTMATTER/preanmle-prime-numbers}
+\input{FRONTMATTER/pre01-Originals}
+\input{FRONTMATTER/newcommand1}
+\input{FRONTMATTER/newcommand2}
+\input{FRONTMATTER/newcommand3}
+
+\definecolor{colourforlinks}{rgb}{0.28, 0.5, 0.5}
+\usepackage[unicode=true,
+            breaklinks=true,
+            colorlinks=true,
+            allcolors=colourforlinks,
+            % pagebackref=true,
+            linktoc=page,
+            pdftitle={Secondary School Maths},
+            pdfauthor={Ronan Downes}]{hyperref}
+
+\usepackage{bibentry}
+\nobibliography*
+\setcapindent{1em} %-- for captions of Figures
+\setcounter{tocdepth}{\sectiontocdepth}
+% \setcounter{tocdepth}{\subsectiontocdepth}
+% \renewcommand{\refname}{References \& further reading}
+\renewcommand{\contentsname}{\vspace{-15mm}}
+\definecolor{light-gray}{gray}{0.97}
+\definecolor{myred}{RGB}{111,12,31}
+\definecolor{mygreen}{RGB}{35,138,35}
+\newfloat{myfloat}{thp}{lop}
+\newmdenv[%
+  outerlinewidth=1.5,%
+  roundcorner=5pt,%
+  linecolor=myred,%
+  backgroundcolor=light-gray,%
+  frametitle=\faExternalLink\ To read or watch,
+]{link-box}
+\newmdenv[%
+  outerlinewidth=1.5,%
+  roundcorner=5pt,%
+  linecolor=mygreen,%
+  backgroundcolor=light-gray,%
+  frametitle=\faCog\ How does it work in practice?,
+]{practice-box}
+\title{Post-primary School Mathematics}
+\author{Ronan Downes}
+\date{v0.1.1}
+\include{FRONTMATTER/publishTikz}
+\cleanlookdateon
+
+\begin{document}
+%-------------------------------------------
+\frontmatter
+\maketitle
+\clearpage
+% \include{front-back/pre}
+% \include{front-back/preface}
+\dominitoc
+\setcounter{tocdepth}{0}
+\tableofcontents
+% \listoffigures
+% \listoftables
+
+%-------------------------------------------
+\mainmatter
+\large
+
+
+\part{Number}
+\include{NUM/Natural/introduction} %10
+\include{NUM/Natural/natural} %20
+\include{NUM/Integer/integer} %30
+\include{NUM/Theory/theory} %40
+
+\part{Originals}
+\include{OriginalChapters/whatisterrain/whatisterrain} %- 01
+\include{OriginalChapters/acquisition/acquisition} %- 02
+
+
+
+
+
+
+ 
+% \include{OriginalChapters/dtvd/dtvd} %- 03
+% \include{OriginalChapters/interpol/interpol} %- 04
+% \include{OriginalChapters/kriging/kriging} %- 05
+% \include{OriginalChapters/topofeatures/topofeatures} %- 06
+% \include{OriginalChapters/runoff/runoff} %- 07
+% \include{OriginalChapters/conversion/conversion} %- 08
+% \include{OriginalChapters/spatialextent/spatialextent} %- 09
+% \include{OriginalChapters/massive/massive} %- 10
+% \include{OriginalChapters/visibility/visibility} %- 11
+% \include{OriginalChapters/pcprocessing/pcprocessing} %- 12
+% \include{OriginalChapters/bathymetry/bathymetry} %- 13
+
+
+%-------------------------------------------
+\backmatter 
+\bibliographystyle{refs/tb.bst} 
+\bibliography{refs/tb}
+
+\cleardoublepage
+\thispagestyle{empty}
+\printindex
+\end{document}
